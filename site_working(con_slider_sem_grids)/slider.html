@@ -1,0 +1,351 @@
+<!DOCTYPE html> 
+<html lang="pt-br,en,fr"> 
+
+	<head>
+
+		<script type="text/javascript" src="scrip.js"></script>
+		<script type="text/javascript" src="slider.js"></script>
+
+
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0"><!--que hace-->
+		<meta http-equiv="X-UA-Compatible" content="ie-edge"><!--que hace-->
+
+		<title>La Web de Ronin</title> 
+
+		<!--favicon-->
+		<link rel="icon"  href="img/logo.png">
+		
+		<!--css extern-->	
+		<link rel="stylesheet" href="./styles_d.css"/>
+
+
+		<!--................................link from fontawesome.........css ...................-->	
+		<link rel="stylesheet" type="text/css" href="/footer/css/font-awesome.min.css">	
+
+		<!--................................link from bootstrap.........css ...................-->
+		<!--	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+
+
+		<!--...............link javascript guanabara............. 
+		<script language="javascript" src="_javascript/funcoes.js"></script>-->
+
+
+
+
+		<!--css 1ntern-->
+		<style>
+			
+		</style>
+
+
+		<script>
+
+
+			function calc_total(){
+
+			var qtd = parseInt(document.getElementById('cQtd').value);
+			tot = qtd * 1500;
+			document.getElementById('cTot').value = tot;	
+
+			}
+
+		</script>
+
+	</head> 
+
+
+
+<!--..........................................................-->
+
+
+<body> 
+
+
+<!--........................header....................................-->
+
+
+	<header class="header">
+
+
+		<div id="dvslider">
+
+
+		<img id="logo" src="img/logo.png">
+
+		
+		<!-- esto es un comentario: <a href="perr0" style="text-align: center;">header</a> -->
+
+		<nav>
+			<ul id="menu"> 
+				<li><a id="alayer" href="a.html">->home<-</a></li>
+				<li><a id="alayer" href="b.html">pagina 1</a></li>
+				<li><a id="alayer" href="c.html">pagina 2</a></li>				
+
+			</ul>
+		</nav>
+
+		</div>
+
+	<button id="bt2">Anterior</button>
+	<button id="bt1">Proxima</button>
+	</header>
+
+
+
+<!--..................seccion de articulo..............-->
+
+	<section class="articulo">
+
+		<h4 style="text-align: left; text-indent: 4px;">17/04/2020</h4> <!--css inline-->
+		<h1 style="text-align: left;text-indent: 4px;">articulo 4</h1>
+		<h3 style="text-align: left;text-indent: 4px;">formulario (aqui va media, javas,css transi,html form falta universalizar elementos)</h2>
+
+		<hr><!--barra espaciad0ra-->
+
+
+<!--<form method="post" id="fContato"  oninput="calc_total();">tener email confg con php(action="mailto:contato@web.com")-->
+
+<form method="post" id="fContato"   onsubmit="return validation() ;">
+
+		<fieldset id="usuario"><legend>Identificaçao do Usuario</legend>
+
+		<p><label for="cNome">Nome:<input type="text" name="tNome" id="cNome" size="20" maxlength="20" placeholder="Nome completo"/></p>
+
+		<p>Senha:<input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos"/></p>
+
+		<p>Email:<input type="email" name="tMail" id="cMail" size="20" maxlength="20" placeholder="Mail (validacao js)"/></p>
+
+
+
+		<fieldset id="Sexo"><legend>Sexo</legend>
+
+		<input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label><br>
+		<input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+
+
+		</fieldset>
+
+		<p>Data de Nascimento:<input type="date" name="tNasc" id="cNasc"/></p>
+
+
+		</fieldset>
+
+
+
+		<fieldset id="endereço"><legend>Endereço do Usuario</legend>
+
+		<p>Logradouro:<input type="text" name="tRua" id="cRua" size="20" maxlength="20" maxlength="80" placeholder="Rua,Av,Trav,..."></p>
+		
+		<p>Numero:<input type="number" name="tNum" id="cNum" min="0" max="9999"/></p>
+
+		<p><label for="cEst">Estado:</label> <select name="tEst" id="cEst">
+		
+		<optgroup label="Regiao Sudeste">
+		<option value="Rj">Rio de Janeiro</option>
+		<option value="SP" selected>São Paulo</option>
+		<option value="MG">Minas Gerais</option>
+		</optgroup>
+
+		<optgroup label="Regiao sudeste">
+		<option value="PR">Paraná</option>
+		<option value="SC">Santa Catarina</option>
+		</optgroup>
+		</p>
+
+		<p><label for="cEst">Cidade:</label></p>
+		<input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade">
+		<datalist id="cidades">
+		<option value="Rio de Janeiro"></option>
+		<option value="Nova Iguaçu"></option>
+		<option value="Niteroi"></option>
+		<option value="Belford Roxo"></option>
+
+
+		</datalist>
+
+		</fieldset>
+
+
+		<fieldset id="mensagem"><legend>Mensagem do Usuario</legend>
+	
+		<p><label for="cUrg">Grau de Urgencia:</label></p>
+		Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Max
+
+
+		<p><label for="cMsg">mensagem:</label>
+		<textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua Mensagem"></textarea></p>
+
+
+		</fieldset>
+
+<input type="submit" name="submit" value="enviar">	
+		</form>
+
+
+<form method="post" id="fContato"  oninput="calc_total();">
+
+		<fieldset id="pedido"><legend>Quero um Google Glass</legend>
+		<p><input type="checkbox" name="tPed" id="cPed" checked/>
+		<p><label for="cCor">Cor:</label><input type="color" name="tCor" id="cCor" value="#0000f"/></p>
+
+		<p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"/></p>
+
+
+		<p><label for="cTot">Preço Total:</label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/></p>
+
+
+		</fieldset>
+
+
+		
+
+<!--<input type="submit" value="enviar">
+
+<input type="image" src="_imagens/botao-enviar.png"/>-->
+
+
+</form>
+
+
+<div id="eresult"></div>
+
+<div id="alert" style= "background-color:rgba(0,0,0,0.5) ;width: 200px;height: 200px;"/>
+	<img src="img/alert.jpg">
+
+</div>
+
+
+</section>	
+
+
+
+
+
+	<!--footer (con problemas en el responsive)-->
+
+	<div class="footer">
+		
+
+		<div class="inner_footer">
+
+			<div class="logo_container">
+
+				<img src="img/logo.png"><!--colocar esta imagen en la carpeta de imagenes-->
+
+			</div>
+
+			<div class="footer_third">
+
+				<h1>Need Help?</h1>
+				<a href="#">Terms &amp; Conditions</a>
+				<a href="#">Privacy Policy</a>
+
+			</div>
+
+
+			<div class="footer_third">
+
+				<h1>More</h1>
+				<a href="#">Brouchures</a>
+				<a href="#">Donate</a>
+				<a href="#">Governance</a>
+				<a href="#">Impact Report</a>
+				
+			</div>
+
+			<div class="footer_third">
+
+				<h1>Follow Us</h1>
+
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+				<li><a href="#"><i class="fab fa-github-square"></i></a></li> <!-- uses brands style -->
+
+				
+				<span>
+					@world Merit Registered Charity<br>
+					England & Wales - 1161402<br>
+					Unit 223, The Tea Factory<br>
+					82 Wood Street<br>
+					Liverpool<br>
+					L14DQ
+					</span>
+			</div>
+
+
+		
+
+	</div>
+
+<!--................................link from fontawesome.........js ...................-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	</div>
+
+
+<!--................................link from bootstrap.........js ...................-->
+<!--	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+
+
+</body>
+</hmtl>
+
+
+
+<!--<form method="post" action="mailto:youremail@email.com" align="left">
+	
+<p>puede ser nombre y apellido</p>	
+	Nome: <input type="text" size="10" maxlength="40" name="name" /><br />
+	Senha: <input type="password" size="10" maxlength="10" name="password" />
+
+	<p>Que tipo de sapartos você está usando?</p>
+	
+	<label>Color:</label> <br />
+	<input type="radio" name="color" value="dark" /> Escuro <br />
+	<input type="radio" name="color" value="light" /> Claro <br />
+	
+	<label>Size:</label> <br />
+	<input type="radio" name="size" value="small" /> Pequeno <br />
+	<input type="radio" name="size" value="average" /> Normal <br />
+	<input type="radio" name="size" value="big" /> Grande <br />
+		<p>Que cor de sapatos você prefere?</p>
+
+	<input type="checkbox" name="shoes" value="black" /> Preto <br/>
+	<input type="checkbox" name="shoes" value="white" /> BRanco<br/>
+	<input type="checkbox" name="shoes" value="gray" /> Cinza <br/>
+	<input type="checkbox" name="shoes" value="black&white" /> Branco e Preto <br/>
+	<p>Preferência musical</p>
+	
+	<select multiple name="music" size="4">
+		<option value="emo" selected>Emo</option> 
+		<option value="metal/rock" >Metal/Rock</option> 
+		<option value="hiphop" >Hip Hop</option> 
+		<option value="ska" >Ska</option> 
+		<option value="jazz" >Jazz</option> 
+		<option value="country" >Country</option> 
+		<option value="classical" >Classical</option> 
+		<option value="alternative" >Alternative</option> 
+		<option value="oldies" >Oldies</option> 
+		<option value="techno" >Techno</option> 
+	</select><br />
+
+		<p>Nível de Educação?</p>
+	
+	<select name="education">
+		<option>Escolha</option>
+		<option>Ensino Médio</option> 
+		<option>Faculdade</option>
+		<option>Doutorado</option>
+	</select><br />
+	<p>comentario</p>
+
+		<textarea rows="5" cols="20" wrap="physical" name="comments">Escreva um comentário</textarea><br />
+	
+	<input type="submit" value="Email Myself" />
+
+-->

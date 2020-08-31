@@ -1,0 +1,294 @@
+/*.............UNIVERSAL..................*/
+
+/*barra de navegacion basica*/
+	
+*{  
+	
+	margin: 0;
+	padding: 0;
+	}
+
+ 
+
+body,ul,li{
+	
+	/*margin: 0;
+	padding: 0;*/
+	list-style: none;
+	font-size: 1.2rem;
+	font-family: Arial;
+}
+
+li , ul {
+	
+	list-style: none;
+	}
+
+
+body {
+		
+	/* http://gradientmagic.com */
+	background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.11) 0px, rgba(0, 0, 0, 0.11) 12px, rgba(1, 1, 1, 0.16) 12px, rgba(1, 1, 1, 0.16) 24px, rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 36px, rgba(0, 0, 0, 0.23) 36px, rgba(0, 0, 0, 0.23) 48px, rgba(0, 0, 0, 0.12) 48px, rgba(0, 0, 0, 0.12) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(0, 0, 0, 0.21) 72px, rgba(0, 0, 0, 0.21) 84px, rgba(0, 0, 0, 0.24) 84px, rgba(0, 0, 0, 0.24) 96px, rgba(1, 1, 1, 0.23) 96px, rgba(1, 1, 1, 0.23) 108px, rgba(1, 1, 1, 0.07) 108px, rgba(1, 1, 1, 0.07) 120px, rgba(0, 0, 0, 0.01) 120px, rgba(0, 0, 0, 0.01) 132px, rgba(1, 1, 1, 0.22) 132px, rgba(1, 1, 1, 0.22) 144px, rgba(1, 1, 1, 0.24) 144px, rgba(1, 1, 1, 0.24) 156px, rgba(0, 0, 0, 0) 156px, rgba(0, 0, 0, 0) 168px, rgba(0, 0, 0, 0.12) 168px, rgba(0, 0, 0, 0.12) 180px), repeating-linear-gradient(90deg, rgba(1, 1, 1, 0.01) 0px, rgba(1, 1, 1, 0.01) 12px, rgba(1, 1, 1, 0.15) 12px, rgba(1, 1, 1, 0.15) 24px, rgba(0, 0, 0, 0.09) 24px, rgba(0, 0, 0, 0.09) 36px, rgba(0, 0, 0, 0.02) 36px, rgba(0, 0, 0, 0.02) 48px, rgba(0, 0, 0, 0.1) 48px, rgba(0, 0, 0, 0.1) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(1, 1, 1, 0.15) 72px, rgba(1, 1, 1, 0.15) 84px, rgba(0, 0, 0, 0.18) 84px, rgba(0, 0, 0, 0.18) 96px, rgba(1, 1, 1, 0.15) 96px, rgba(1, 1, 1, 0.15) 108px, rgba(1, 1, 1, 0.09) 108px, rgba(1, 1, 1, 0.09) 120px, rgba(1, 1, 1, 0.07) 120px, rgba(1, 1, 1, 0.07) 132px, rgba(1, 1, 1, 0.05) 132px, rgba(1, 1, 1, 0.05) 144px, rgba(0, 0, 0, 0.1) 144px, rgba(0, 0, 0, 0.1) 156px, rgba(1, 1, 1, 0.18) 156px, rgba(1, 1, 1, 0.18) 168px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0px, rgba(0, 0, 0, 0.24) 16px, rgba(1, 1, 1, 0.06) 16px, rgba(1, 1, 1, 0.06) 32px, rgba(0, 0, 0, 0.16) 32px, rgba(0, 0, 0, 0.16) 48px, rgba(1, 1, 1, 0) 48px, rgba(1, 1, 1, 0) 64px, rgba(1, 1, 1, 0.12) 64px, rgba(1, 1, 1, 0.12) 80px, rgba(1, 1, 1, 0.22) 80px, rgba(1, 1, 1, 0.22) 96px, rgba(0, 0, 0, 0.24) 96px, rgba(0, 0, 0, 0.24) 112px, rgba(0, 0, 0, 0.25) 112px, rgba(0, 0, 0, 0.25) 128px, rgba(1, 1, 1, 0.12) 128px, rgba(1, 1, 1, 0.12) 144px, rgba(0, 0, 0, 0.18) 144px, rgba(0, 0, 0, 0.18) 160px, rgba(1, 1, 1, 0.03) 160px, rgba(1, 1, 1, 0.03) 176px, rgba(1, 1, 1, 0.1) 176px, rgba(1, 1, 1, 0.1) 192px), repeating-linear-gradient(135deg, rgba(1, 1, 1, 0.18) 0px, rgba(1, 1, 1, 0.18) 3px, rgba(0, 0, 0, 0.09) 3px, rgba(0, 0, 0, 0.09) 6px, rgba(0, 0, 0, 0.08) 6px, rgba(0, 0, 0, 0.08) 9px, rgba(1, 1, 1, 0.05) 9px, rgba(1, 1, 1, 0.05) 12px, rgba(0, 0, 0, 0.01) 12px, rgba(0, 0, 0, 0.01) 15px, rgba(1, 1, 1, 0.12) 15px, rgba(1, 1, 1, 0.12) 18px, rgba(0, 0, 0, 0.05) 18px, rgba(0, 0, 0, 0.05) 21px, rgba(1, 1, 1, 0.16) 21px, rgba(1, 1, 1, 0.16) 24px, rgba(1, 1, 1, 0.07) 24px, rgba(1, 1, 1, 0.07) 27px, rgba(1, 1, 1, 0.23) 27px, rgba(1, 1, 1, 0.23) 30px, rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 33px, rgba(0, 0, 0, 0.18) 33px, rgba(0, 0, 0, 0.18) 36px, rgba(1, 1, 1, 0.12) 36px, rgba(1, 1, 1, 0.12) 39px, rgba(1, 1, 1, 0.13) 39px, rgba(1, 1, 1, 0.13) 42px, rgba(1, 1, 1, 0.2) 42px, rgba(1, 1, 1, 0.2) 45px, rgba(1, 1, 1, 0.18) 45px, rgba(1, 1, 1, 0.18) 48px, rgba(0, 0, 0, 0.2) 48px, rgba(0, 0, 0, 0.2) 51px, rgba(1, 1, 1, 0) 51px, rgba(1, 1, 1, 0) 54px, rgba(0, 0, 0, 0.03) 54px, rgba(0, 0, 0, 0.03) 57px, rgba(1, 1, 1, 0.06) 57px, rgba(1, 1, 1, 0.06) 60px, rgba(1, 1, 1, 0) 60px, rgba(1, 1, 1, 0) 63px, rgba(0, 0, 0, 0.1) 63px, rgba(0, 0, 0, 0.1) 66px, rgba(1, 1, 1, 0.19) 66px, rgba(1, 1, 1, 0.19) 69px), linear-gradient(90deg, rgb(239, 53, 115), rgb(79, 2, 93));
+	}
+
+
+
+
+
+
+/*-----------------------HEADER--------------------*/
+
+
+		
+		 #dvslider{
+
+ 		 	display: flex;
+  			justify-content: center;
+ 			align-items: center;
+  			justify-content: space-between;
+ 			 /*------el segmento arriba centra verticalmente sin deformar la imagen--*/
+
+			 width: 1850px;
+			 height: 360px;
+			 border: 12px solid lightblue;
+			
+
+
+
+		 }
+
+		#alayer {
+			text-decoration: none;
+			font-family: arial;
+
+			/*---from style---*/
+
+			text-decoration: none;
+			color: white;
+		}
+
+ 		#header{
+
+ 			background: #1abc9c;
+ 			display: flex;
+ 			flex-wrap: wrap;/*este tag permite que el site sea responsive*/
+ 			justify-content: space-between;
+ 			align-items: center;
+ 			padding: 20px;
+ 			margin: 20px;
+			border-radius: 5px;
+
+ 		}
+
+		#logo{
+			width: 100px;
+			margin-left: 10%;
+		}
+
+		#menu{
+			display: flex;
+			margin-right: 20px;
+
+
+		}
+
+		#menu li{
+
+			margin-left: 20px;
+
+		}
+
+		#menu li a{
+
+			display: block;
+			padding:5px;
+			background: tomato;
+			border-radius: 5px;
+			box-shadow: 10px 10px 6px -6px black;
+
+		}
+ 		
+
+
+
+
+/*..................................seccion de articulo*/
+	.articulo_sec {
+
+			background: red;
+
+			
+
+		}
+
+		.box{
+
+			background: red; 
+			margin-left:80px;
+			margin-right:80px;
+			padding: 20px;
+			box-sizing: border-box;
+			background: orange;
+			border-radius: 4px;
+			box-shadow: 0 5px 15px rgba(0,0,0,.5);
+			display: flex;
+			transition: .5S;
+		}
+
+		.box:hover{
+			box-shadow: 0 15px 30px rgba(0,0,0,.5);
+		}
+
+		.box .imgbx{
+
+			width: 200px;
+			flex:0 0 200px;
+
+		}
+
+		.box .imgbx img{
+			max-width: 100%;
+		}
+
+		.box .content {
+			padding-left: 20px;
+			padding-right: 20px;
+
+		}
+
+		.box .content h2{
+			margin:0;
+			padding-left:0;
+			color: #ff005c;
+		}
+
+		.box .content p{
+			margin: 0;
+			padding: 10px 0 0;
+			text-align: justify; 
+			font-size: 22px;
+		}
+				
+
+/*ate min 20:56 de https://www.youtube.com/watch?v=x-4z_u8LcGc&t=402s*/
+
+
+
+/*............................................footer.......................*/
+
+
+#afoot{
+	text-decoration: none;
+	color: white;
+	}
+
+
+#footer {
+		 
+	position: relative;
+	bottom: 0;
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin: 20px;
+	margin-left: 35px;
+
+
+	text-align: center;
+	background: black;
+	color: white;
+	font-size: 30px;
+	font-family: cursive;
+	width: 95%;
+	border-radius: 5px;
+/*-----------------------------------*/
+	/*width:100vw;*/
+	display:block;
+	overflow:hidden;/*WHAT DOES THIS LINE*/
+	padding: 70px 0;
+	/*box-sizing: border-box;*//*WHAT DOES THIS LINE*/
+	 			
+	}
+
+
+.inner_footer{
+	display:block;
+	margin:0 auto;
+	width:1100px;
+	height:100%;
+
+}
+
+.inner_footer .logo_container{
+	width: 35%;
+	float:left;
+	height:100%;
+	display:block;
+
+}
+
+.inner_footer .logo_container img{
+	width:65px;
+	height:auto;
+
+}
+
+.inner_footer .footer_third{
+	
+	width:calc(21.666% -20px);
+	margin-right:10px;
+	float:left;
+	height:100%;
+
+}
+
+.inner_footer .footer_third:last-child{
+	margin-right:0;
+
+}
+
+
+.inner_footer .footer_third h1{
+	
+	font-family:'arial';
+	font-size:22px;
+	color: white;
+	display:block;
+	width:100%;
+	margin-bottom:20px;
+
+}
+
+.inner_footer .footer_third a{
+	
+	font-family:'arial';
+	font-size:18px;
+	color:white;
+	display:block;
+	font-weight:200;
+	width:100%;
+	margin-bottom:20px;
+	padding-bottom:5px;
+
+}
+
+.inner_footer .footer_third li{
+	
+	display: inline-block;
+	padding: 0 5px;
+	font-size:20px;
+}
+
+.inner_footer .footer_third span{
+
+	color:white;
+	font-family: 'arial';
+	font-size: 12px;
+	font-weight: 200;
+	display: block;
+	width:100%;
+	padding-top: 20px;
+
+
+}
+
